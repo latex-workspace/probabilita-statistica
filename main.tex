@@ -14,58 +14,63 @@
 \begin{document}
 \maketitle
 \tableofcontents
+\listofdefs
+\listoftheorems
+
+\newpage
 \section{Tribù e algebre}
 E' spesso necessario sceglere i possibili eventi all'interno di una classe che presenti caratteristiche particolari, ossia una \underline{tribù}
-\definizione{Tribù}{
+\begin{definizione}{Tribù}
 	Data una classe $ \mathcal{A} $ su uno spazio campionario $ \omega  $ si dice \underline{tribù} se soddisfa le seguenti proprietà:
 	\begin{enumerate}
 		\item $ \omega \in \mathcal{A}$
 		\item se $ A \in  \mathcal{A} $ allora $ A^{c} \in  \mathcal{A} $
 		\item Se $ A_1, A_2,\ldots,A_i, \ldots \in \mathcal{A} $ allora $ \bigcup_{i=1}^{+ \infty }A_i \in \mathcal{A} $
 	\end{enumerate}
-}
-\definizione{Algebra}{
+\end{definizione}
+
+\begin{definizione}{Algebra}
 	Data una classe $ \mathcal{A} $ su uno spazio campionario $ \omega  $ si dice \underline{tribù} se soddisfa le seguenti proprietà:
 	\begin{enumerate}
 		\item $ \omega \in \mathcal{A}$
 		\item se $ A \in  \mathcal{A} $ allora $ A^{c} \in  \mathcal{A} $
 		\item Se $ A_1, A_2,\ldots,A_i, \ldots \in \mathcal{A} $ allora $ \bigcup_{i=1}^n A_i \in \mathcal{A} $
 	\end{enumerate}
-}
+\end{definizione}
 In particolare nota che
 \begin{itemize}
 	\item \textit{Proprietà 2:} garantisce che se un evento $ E $ si può verificare, allora si può verificare anche $ E^{c} $
 	\item  \textit{Proprietà 3:} garanisce che se si possono verificare gli eventi $ E_1,\ldots,E_i $ allora si può verificare anche l'evento $ E_1 \cup  E_2 \cup \ldots \cup  E_i $.
 \end{itemize}
-\teorema{Tribù e algeebra}{
+\begin{teorema}{Tribù e algeebra}
 	Un'\underline{algebra} è anche una \underline{tribù}, tuttavia \underline{non} vale il contrario
-}
+\end{teorema}
 Dimostrzione:
 \begin{itemize}
 	\item Per definizione una tribù contine $ \omega  $ e di ogni elemento contiene anche il \underline{complementare}. Quindi ogni tribù contiene $ \emptyset  $.
 	\item Data una tribù, l'unione di un numero finito di suoi elementi sta in questa. Ma anche l'unione di un numero infinito di suoi elementi, in quanto posso aggiungere \underline{infiniti insiemi vuoti}
 \end{itemize}
 
-\definizione{Evento}{
+\begin{definizione}{Evento}
 	Un elemento di una tribù $ \mathcal{A} $ si dice \underline{evento}.
-}
-\definizione{Spazio probabilizzabile}{
+\end{definizione}
+\begin{definizione}{Spazio probabilizzabile}
 	Dato uno spazio campionario $ \omega  $ e una tribù $ \mathcal{A} $ la coppia
 	\[
 		\left(\omega , \mathcal{A}\right)
 	\]
 	è detta \underline{spazio probabilizzabile}
-}
+\end{definizione}
 
-\definizione{Spazio probabilizzato}{
+\begin{definizione}{Spazio probabilizzato}
 	Dato $ \omega  $ e una tribù $ A $ di $ \omega $ e una probabilità $ P $ sullo \underline{spazio probabilizzabile} (ossia la coppia $ \omega $, $ A $), chiameremo la terna
 	\[
 		(\omega, A, P)
 	\]
 	uno \underline{spazio probabilizzato}
-}
+\end{definizione}
 
-\definizione{Probabilità (versione assiomatica Kolmogorov)}{
+\begin{definizione}{Probabilità (versione assiomatica Kolmogorov)}
 	Dato uno spazio proabilizzabile $ \left(\omega , \mathcal{A}\right) $ la \underline{probabilità} è un'applicazione $ Pr: \mathcal{A} \to \R ^{+} $  tale che:
 	\begin{itemize}
 		\item \textit{Non negatività:} Se $A \in \mathcal{A} $ allora $ Pr\left(A\right) \ge 0 $
@@ -75,7 +80,7 @@ Dimostrzione:
 			      \forall A_j, A_j \text{ t.c. } A_i \cap A_j = \emptyset i \neq j \quad \Rightarrow \quad Pr\left(\bigcup _{i=1}^{\infty }A_i\right) = \sum_{i=1}^{\infty} Pr\left(A_i\right)
 		      \]
 	\end{itemize}
-}
+\end{definizione}
 \subsubsection*{Esempio 1}
 Pendo un insieme e una tribù:
 \[
@@ -125,10 +130,10 @@ Immagino di prendere un bersaglio di raggio $ r $ e di voler calcolare la probab
 		      \sum_{i=1}^n \Pr\left(A_i\right)-\sum_{1 \leq i \leq j \leq n} \Pr\left(A_i \cap A_j\right) \leq \Pr\left(\cup_{i=1}^n A_i\right) \leq \sum_{i=1}^n \Pr\left(A_i\right), \quad n \geq 1
 	      \]
 \end{itemize}
-\definizione{}{
-Data una famiglia di spazi probabilizzabili $ \left\{\left(\omega _i, A_i\right)\right\}_{i \in  I} $, possiamo costruire uno spazio probabilizzabile prodotto ottenuto come pr odotto cartesiano
-}
-\definizione{Disposizioni con ripetizioni}{
+\begin{definizione}{}
+	Data una famiglia di spazi probabilizzabili $ \left\{\left(\omega _i, A_i\right)\right\}_{i \in  I} $, possiamo costruire uno spazio probabilizzabile prodotto ottenuto come pr odotto cartesiano
+\end{definizione}
+\begin{definizione}{Disposizioni con ripetizioni}
 	Sia $ S = \left\{a_1,a_2,\ldots , a_n\right\} \quad \#s = n $ un insieme costituito da oggetti distinti. Il numero di \underline{allineamenti} che si possono formare con \underline{r} oggetti scelti tra gli $ n $ si indica con $ D_{n,r}^{*} $. Due allineamenti sono diversi se una delle seguenti condizioni è verificata:
 	\begin{itemize}
 		\item Contengono \underline{oggetti divisersi}
@@ -138,9 +143,9 @@ Data una famiglia di spazi probabilizzabili $ \left\{\left(\omega _i, A_i\right)
 	\[
 		D_{n, r}^{*} = n ^{r}
 	\]
-}
+\end{definizione}
 \section{Calcolo combinatorio}
-\definizione{Disposizione senza ripetizione}{
+\begin{definizione}{Disposizione senza ripetizione}
 	Sia $ S = \left\{a_1,a_2,\ldots , a_n\right\} \quad \#s = n $ un insieme costituito da oggetti distinti. Il numero di \underline{allineamenti} che si possono formare con \underline{r} oggetti scelti tra gli $ n $ si indica con $ D_{n,r} $. Due allineamenti sono diversi se una delle seguenti condizioni è verificata:
 	\begin{itemize}
 		\item Contengono \underline{oggetti divisersi}
@@ -149,20 +154,20 @@ Data una famiglia di spazi probabilizzabili $ \left\{\left(\omega _i, A_i\right)
 	\[
 		D_{n,r} = n \cdot  \left(n-1\right) \cdot  \ldots \cdot \left(n-r +1\right)=\frac{n!}{\left(n-r\right)!}
 	\]
-}
-\definizione{Permutazioni}{
+\end{definizione}
+\begin{definizione}{Permutazioni}
 	Le permutazioni di $ n $ oggetti non sono altro che le \underline{disposizioni senza ripetizione} di $ n  $ oggetti in $ n $ posizioni:
 	\[
 		P_n = D_{n,n} = n!
 	\]
-}
-\definizione{Combinazioni}{
+\end{definizione}
+\begin{definizione}{Combinazioni}
 	Sono date da tutti gli isiemi contenenti \underline{oggetti diversi} (ossia non conta l'ordine con il quale questi vengono disposti).
 	\[
 		C_{n,r} = \frac{D_{n,r}}{P_r} = \frac{n!}{\left(n-r\right)! \cdot r!} = \binom{n}{r}
 	\]
 	Ossia quanti gruppi di $ r $ persone posso estrarne da $ n $
-}
+\end{definizione}
 \subsection{Esercizi}
 \subsubsection*{Esercizio 1}
 Immaginiamo di avere un comitato di 5 persone su 10.
@@ -198,7 +203,7 @@ innanzitutto, $ \omega = P_11 = 11! $. Inoltre mi immagino che ogni lettera ripe
 \]
 \subsubsection*{Esercizio 4}
 Viene somministrato un trattamento (T) e un placebo (C) a maschi e femmine
-\begin{table}[h!]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{|c c c c|}
 		\hline
@@ -229,18 +234,18 @@ tuttavia, nota che:
 	P\left(S | T , F\right) & = \frac{12}{12 + 15} = \frac{12}{27}
 \end{align*}
 \subsection{Teorema di Bayes}
-\teorema{Teorema di Bayes}{
-Abbiamo una successione di eventi $ \left\{ A_i\right\}_{i = 1}^{+ \infty } $ che formi una partizione di $ \omega  $. Assumiamo che $ P\left(A_i\right)> 0 \forall  i $. Prendo un $ b \in \mathcal{A} \text{ t.c. } P\left(B\right)> 0 $
-\[
-	P\left(A_i | B\right) = \frac{P\left(B|A_i\right)\cdot P\left(A_i\right)}{\sum_{j=1}^{\infty} P\left(B|A_j\right)\cdot  P \left(A_j\right)}
-\]
-}
-\definizione{Indipendenza stocastica}{
+\begin{teorema}{Teorema di Bayes}
+	Abbiamo una successione di eventi $ \left\{ A_i\right\}_{i = 1}^{+ \infty } $ che formi una partizione di $ \omega  $. Assumiamo che $ P\left(A_i\right)> 0 \forall  i $. Prendo un $ b \in \mathcal{A} \text{ t.c. } P\left(B\right)> 0 $
+	\[
+		P\left(A_i | B\right) = \frac{P\left(B|A_i\right)\cdot P\left(A_i\right)}{\sum_{j=1}^{\infty} P\left(B|A_j\right)\cdot  P \left(A_j\right)}
+	\]
+\end{teorema}
+\begin{definizione}{Indipendenza stocastica}
 	Dato $ \left(\omega, \mathcal{A}, P\right) $ e due eventi $ A, B $ diremo che sono tra loro \underline{stocasticamente indipendenti} se e solo se:
 	\[
 		P\left(A \cap B\right)= P\left(A \right) \cdot P\left(B\right)
 	\]
-}
+\end{definizione}
 Ciò significa che i due eventi \underline{non} si influenzano a vicenda:
 \[
 	P\left(A|B\right)= \frac{P\left(A \cap  B\right)}{P(B)\left(B\right)} = \frac{P (A) \cdot P\left(B\right) }{P\left(B\right)} = P\left(A\right)
@@ -329,7 +334,7 @@ Partiamo dimostrando che $ \left(a,b\right) \in \mathcal{A}_{\mathcal{F}} $.
 
 
 Dato uno spazio campionario e una tribù (dei \textit{bourelliani}), manca solo definire la funzione di probabilità. Tale funzione è detta funzione di distribuizione:
-\definizione{Funzione di distribuzione o ripartizione}{
+\begin{definizione}{Funzione di distribuzione o ripartizione}
 	Una \underline{funzione di distribuzione} si $  \left(\R , B\left(\R \right)\right) $ $ F\left(x\right) $ è una funzione di distribuzione se:
 	\begin{itemize}
 		\item Non decrescente: $ x_1 < x_2 \Rightarrow  F\left(x_1\right) \le F\left(x_2\right) $
@@ -344,7 +349,7 @@ Dato uno spazio campionario e una tribù (dei \textit{bourelliani}), manca solo 
 	\[
 		F\left(x\right) - \lim_{z \to x^{-}} F\left(z\right)
 	\]
-}
+\end{definizione}
 
 \subsection{Esempi}
 Consideriamo il seguente esperimento: \textit{calcola la probabilità di estrarre un punto nell'intervallo $ \left[0,1\right] $ nei numeri reali $ \R $}. Avremo dunque
@@ -352,6 +357,7 @@ Consideriamo il seguente esperimento: \textit{calcola la probabilità di estrarr
 	\omega = \left[0,1\right] \in \R \quad \mathcal{A}_{\mathcal{F}} = \mathcal{B}\left[0,1\right] \quad P\left(\left(a,b\right]\right) = a-b
 \]
 Quindi la probabilità di estrarre un punto appartenente ad un intervallo $ \left(a,b\right] $ corrisponde alla sua lunghezza. La funzione di probabilità sarà la seguente:
+
 	\begin{center}
 			\begin{tikzpicture}
 				\begin{axis}[ title = Esempio funzione di distribuzione,
@@ -364,93 +370,95 @@ Quindi la probabilità di estrarre un punto appartenente ad un intervallo $ \lef
 					\addplot[black, thick, domain = 1:15] {1};
 				\end{axis}
 			\end{tikzpicture}
-			Calcoliamo ora le probabilità dei seguenti eventi.
-			\begin{itemize}
-				\item $A_1=\left\{\left(0, \frac{1}{4}\right)\right\}$
-				\item $A_2=\{a\}$
-				\item $A_3=\left\{a_1, a_2, \cdots\right\}$
-				\item $A_4=\left\{\left[\frac{1}{2}, \frac{3}{4}\right] \cup\left[\frac{4}{5}, 1\right]\right\}$
-				\item $A_5=[0,1] / A_3$;
-				\item $A_6=\cup_{n=1}^{\infty}\left[\frac{k}{k+1}, \frac{k}{k+1}+\frac{1}{10^k}\right]$
-			\end{itemize}
-			dove $a \in[0,1]$ e $a_i \in[0,1], i=1,2, \cdots$.
-
-			\subsubsection*{Soluzioni}
-			\begin{itemize}
-				\item $A_1$ è un intervallo e pertanto $\Pr\left(A_1\right)=F\left(\frac{1}{4}\right)-F(0)=$ $\frac{1}{4} ;$
-				      - \item$A_2=\{a\}=\cap_{n=1}^{\infty}\left(a-\frac{1}{n}, a\right]=\lim _{n \rightarrow+\infty}\left(a-\frac{1}{n}, a\right]$ e pertanto (ricordando che la successione degli intervalli è non crescente) per la proprietà di continuità,
-				      \[
-					      \begin{aligned}
-						      \Pr\left(A_2\right) & =\Pr(\{a\})=\Pr\left(\lim _{n \rightarrow+\infty}\left(a-\frac{1}{n}, a\right]\right)=\lim _{n \rightarrow+\infty} \Pr\left(\left(a-\frac{1}{n}, a\right]\right) \\
-						                          & =\lim _{n \rightarrow+\infty}\left(F(a)-F\left(a-\frac{1}{n}\right)\right)                                                                                       \\
-						                          & =\lim _{n \rightarrow+\infty} \frac{1}{n}=0
-					      \end{aligned}
-				      \]
-				      -\item $A_3=\left\{a_1, a_2, \cdots\right\}=\cup_{i=1}^{\infty}\left\{a_i\right\}$ e quindi
-				      \[
-					      \Pr\left(A_3\right)=\Pr\left(\left\{a_1, a_2, \cdots\right\}\right)=\Pr\left(\cup_{i=1}^{\infty}\left\{a_i\right\}\right)=\sum_{i=1}^{\infty} \Pr\left(\left\{a_i\right\}\right)=0
-				      \]
-				      -\item Per $A_4$ si consideri che $i$ due intervalli sono disgiunti allora
-				      \[
-					      \begin{aligned}
-						      \Pr\left(A_4\right) & =\Pr\left(\left[\frac{1}{2}, \frac{3}{4}\right] \cup\left[\frac{4}{5}, 1\right]\right)=\Pr\left(\left[\frac{1}{2}, \frac{3}{4}\right]\right)+\Pr\left(\left[\frac{4}{5}, 1\right]\right) \\[0.7em]
-						                          & =F\left(\frac{3}{4}\right)-F\left(\frac{1}{2}\right)+F(1)-F\left(\frac{4}{5}\right)=\frac{1}{4}+\frac{1}{5}=\frac{9}{20}
-					      \end{aligned}
-				      \]
-				\item $ A_5 $:
-				      \[
-					      \Pr\left(A_5\right)=\Pr\left([0,1] / A_3\right)=\Pr([0,1])-\Pr\left(A_3\right)=\Pr([0,1])=1
-				      \]
-				\item $A_6$ è un'unione numerabile. Questo si può dimostrare per induzione (ossia dobbiamo dimostrare che gli intervalli sono tutti disgiunti)
-				      \begin{itemize}
-					      \item Cerchiamo di dimostrare che l'intervallo \textit{n-esimo} non si sovrappone con l'\textit{n+1-esimo}
-					            \[
-						            \frac{k+1}{k+2} > \frac{k}{k+1}+ \frac{1}{10^k}  \quad \forall k \ge 1
-					            \]
-					            semplificando devo dimostrare che
-					            \[
-						            10^k > k^2  + 3k + 2
-					            \]
-					      \item \textit{Passo base:} per $ k=1 $ l'ipotesi è verificata
-					      \item \textit{Passo induttivo:} assumiamo che $ 10^k > k^2  + 3k + 2 $ sia vera. Devo dimostrare che la proprietà vale anche per $ k+1 $:
-					            \begin{align*}
-						            10^{k+1}       & >\left(k+1\right)^{2} + 3\left(k+1\right) + 2 \\[0.7em]
-						            10^{k}\cdot 10 & > k^2  + 5k + 6                               \\[0.7em]
-						            10^{k}         & > \frac{k^2  + 5k + 6}{10}
-					            \end{align*}
-					            per ipotesi induttiva $ 10^{k} > k^2  + 3k + 2 $, quindi se $ k^2  + 3k + 2 > \frac{k^2  + 5k + 6}{10} $ ho concluso
-					            \[
-						            10\cdot \left(k^2  + 3k + 2\right) > k^2  + 5k + 6 \quad \rightarrow \quad 9 k^2  + 25k + 14 > 0 \quad \forall k \ge  1
-					            \]
-				      \end{itemize}
-				      Dunque posso procedere con il calcolo, considerando che tutti gli intervalli sono disgiunti
-				      \[
-					      \begin{aligned}
-						      \Pr\left(A_6\right) & =\sum_{k=1}^{\infty} \Pr\left(\left[\frac{k}{k+1}, \frac{k}{k+1}+\frac{1}{10^k}\right]\right)                  \\
-						                          & =\sum_{k=1}^{\infty}\left(F\left(\frac{k}{k+1}+\frac{1}{10^k}\right)-F\left(\frac{k}{k+1}\right)\right)        \\
-						                          & =\sum_{k=1}^{\infty} \frac{1}{10^k}=\frac{1}{1-\frac{1}{10}}-1=\frac{\frac{1}{10}}{1-\frac{1}{10}}=\frac{1}{9}
-					      \end{aligned}
-				      \]
-			\end{itemize}
-			\subsubsection*{Altra funzione di probabilità }
-			\begin{tikzpicture}
-				\begin{axis}[
-						tick style = dashed,
-						axis lines = {center, left},
-						xmin=-0.5, xmax=1.5,
-						ymin=-0.2,ymax=1.2,
-						grid = major,
-						restrict y to domain = -1:3, domain=0:1, width=0.98\textwidth, height=0.5\textwidth, samples=200,  ylabel=$f(x)$, xlabel=$x$, legend entries={$F\left(x\right)$}]
-					\addplot[black, thick] {1/2};
-					\node at (0,1/2)[circle,fill,inner sep=1.5pt, anchor = center]{};
-					\node at (1,1)[circle,fill,inner sep=1.5pt, anchor = center]{};
-					\addplot[black, thick, domain = -15:0] {0};
-					\addplot[black, thick, domain = 1:15] {1};
-					\node at (1,1/2)[circle,draw,fill=white, inner sep=1.5pt, anchor = center]{};
-					\node at (0,0)[circle,draw,fill=white,inner sep=1.5pt, anchor = center]{};
-				\end{axis}
-			\end{tikzpicture}
 		\end{center}
+
+	Calcoliamo ora le probabilità dei seguenti eventi.
+	\begin{itemize}
+			\item $A_1=\left\{\left(0, \frac{1}{4}\right)\right\}$
+			\item $A_2=\{a\}$
+			\item $A_3=\left\{a_1, a_2, \cdots\right\}$
+			\item $A_4=\left\{\left[\frac{1}{2}, \frac{3}{4}\right] \cup\left[\frac{4}{5}, 1\right]\right\}$
+			\item $A_5=[0,1] / A_3$;
+			\item $A_6=\cup_{n=1}^{\infty}\left[\frac{k}{k+1}, \frac{k}{k+1}+\frac{1}{10^k}\right]$
+		\end{itemize}
+	dove $a \in[0,1]$ e $a_i \in[0,1], i=1,2, \cdots$.
+
+	\subsubsection*{Soluzioni}
+	\begin{itemize}
+			\item $A_1$ è un intervallo e pertanto $\Pr\left(A_1\right)=F\left(\frac{1}{4}\right)-F(0)=$ $\frac{1}{4} ;$
+			      - \item$A_2=\{a\}=\cap_{n=1}^{\infty}\left(a-\frac{1}{n}, a\right]=\lim _{n \rightarrow+\infty}\left(a-\frac{1}{n}, a\right]$ e pertanto (ricordando che la successione degli intervalli è non crescente) per la proprietà di continuità,
+			      \[
+				      \begin{aligned}
+					      \Pr\left(A_2\right) & =\Pr(\{a\})=\Pr\left(\lim _{n \rightarrow+\infty}\left(a-\frac{1}{n}, a\right]\right)=\lim _{n \rightarrow+\infty} \Pr\left(\left(a-\frac{1}{n}, a\right]\right) \\
+					                          & =\lim _{n \rightarrow+\infty}\left(F(a)-F\left(a-\frac{1}{n}\right)\right)                                                                                       \\
+					                          & =\lim _{n \rightarrow+\infty} \frac{1}{n}=0
+				      \end{aligned}
+			      \]
+			      -\item $A_3=\left\{a_1, a_2, \cdots\right\}=\cup_{i=1}^{\infty}\left\{a_i\right\}$ e quindi
+			      \[
+				      \Pr\left(A_3\right)=\Pr\left(\left\{a_1, a_2, \cdots\right\}\right)=\Pr\left(\cup_{i=1}^{\infty}\left\{a_i\right\}\right)=\sum_{i=1}^{\infty} \Pr\left(\left\{a_i\right\}\right)=0
+			      \]
+			      -\item Per $A_4$ si consideri che $i$ due intervalli sono disgiunti allora
+			      \[
+				      \begin{aligned}
+					      \Pr\left(A_4\right) & =\Pr\left(\left[\frac{1}{2}, \frac{3}{4}\right] \cup\left[\frac{4}{5}, 1\right]\right)=\Pr\left(\left[\frac{1}{2}, \frac{3}{4}\right]\right)+\Pr\left(\left[\frac{4}{5}, 1\right]\right) \\[0.7em]
+					                          & =F\left(\frac{3}{4}\right)-F\left(\frac{1}{2}\right)+F(1)-F\left(\frac{4}{5}\right)=\frac{1}{4}+\frac{1}{5}=\frac{9}{20}
+				      \end{aligned}
+			      \]
+			\item $ A_5 $:
+			      \[
+				      \Pr\left(A_5\right)=\Pr\left([0,1] / A_3\right)=\Pr([0,1])-\Pr\left(A_3\right)=\Pr([0,1])=1
+			      \]
+			\item $A_6$ è un'unione numerabile. Questo si può dimostrare per induzione (ossia dobbiamo dimostrare che gli intervalli sono tutti disgiunti)
+			      \begin{itemize}
+				      \item Cerchiamo di dimostrare che l'intervallo \textit{n-esimo} non si sovrappone con l'\textit{n+1-esimo}
+				            \[
+					            \frac{k+1}{k+2} > \frac{k}{k+1}+ \frac{1}{10^k}  \quad \forall k \ge 1
+				            \]
+				            semplificando devo dimostrare che
+				            \[
+					            10^k > k^2  + 3k + 2
+				            \]
+				      \item \textit{Passo base:} per $ k=1 $ l'ipotesi è verificata
+				      \item \textit{Passo induttivo:} assumiamo che $ 10^k > k^2  + 3k + 2 $ sia vera. Devo dimostrare che la proprietà vale anche per $ k+1 $:
+				            \begin{align*}
+					            10^{k+1}       & >\left(k+1\right)^{2} + 3\left(k+1\right) + 2 \\[0.7em]
+					            10^{k}\cdot 10 & > k^2  + 5k + 6                               \\[0.7em]
+					            10^{k}         & > \frac{k^2  + 5k + 6}{10}
+				            \end{align*}
+				            per ipotesi induttiva $ 10^{k} > k^2  + 3k + 2 $, quindi se $ k^2  + 3k + 2 > \frac{k^2  + 5k + 6}{10} $ ho concluso
+				            \[
+					            10\cdot \left(k^2  + 3k + 2\right) > k^2  + 5k + 6 \quad \rightarrow \quad 9 k^2  + 25k + 14 > 0 \quad \forall k \ge  1
+				            \]
+			      \end{itemize}
+			      Dunque posso procedere con il calcolo, considerando che tutti gli intervalli sono disgiunti
+			      \[
+				      \begin{aligned}
+					      \Pr\left(A_6\right) & =\sum_{k=1}^{\infty} \Pr\left(\left[\frac{k}{k+1}, \frac{k}{k+1}+\frac{1}{10^k}\right]\right)                  \\
+					                          & =\sum_{k=1}^{\infty}\left(F\left(\frac{k}{k+1}+\frac{1}{10^k}\right)-F\left(\frac{k}{k+1}\right)\right)        \\
+					                          & =\sum_{k=1}^{\infty} \frac{1}{10^k}=\frac{1}{1-\frac{1}{10}}-1=\frac{\frac{1}{10}}{1-\frac{1}{10}}=\frac{1}{9}
+				      \end{aligned}
+			      \]
+		\end{itemize}
+	\subsubsection*{Altra funzione di probabilità }
+	\begin{tikzpicture}
+			\begin{axis}[
+					tick style = dashed,
+					axis lines = {center, left},
+					xmin=-0.5, xmax=1.5,
+					ymin=-0.2,ymax=1.2,
+					grid = major,
+					restrict y to domain = -1:3, domain=0:1, width=0.98\textwidth, height=0.5\textwidth, samples=200,  ylabel=$f(x)$, xlabel=$x$, legend entries={$F\left(x\right)$}]
+				\addplot[black, thick] {1/2};
+				\node at (0,1/2)[circle,fill,inner sep=1.5pt, anchor = center]{};
+				\node at (1,1)[circle,fill,inner sep=1.5pt, anchor = center]{};
+				\addplot[black, thick, domain = -15:0] {0};
+				\addplot[black, thick, domain = 1:15] {1};
+				\node at (1,1/2)[circle,draw,fill=white, inner sep=1.5pt, anchor = center]{};
+				\node at (0,0)[circle,draw,fill=white,inner sep=1.5pt, anchor = center]{};
+			\end{axis}
+		\end{tikzpicture}
+
 	Nota come in questa funzione ogni intervallo $ \left(a,b\right) a,b \in \left[0,1\right)$ abbia probabilità 0! L'intero "peso" si probabilità è contenuto nei singoletti $ \left\{0\right\} $ e $ \left\{1\right\} $
 \section{Variabili aleatorie}
 Quando effettuiamo un esperimento aleatorio spesso i risultati sono di natura \underline{non numerica}. Spesso tuttavia può essere utile averne di natura numerica. Per soddisfare questa esigenza esistono le \underline{variabili aleatorie}, che permettono di collegare un esito di un esperimento aleatorio di natura non numerica ad un \underline{numero reale}.
@@ -459,20 +467,20 @@ Consideriamo il lancio di due dadi a 6 facce. In questo caso avremmo:
 	\Omega = \left\{\left(x, y\right) x,y \in 1,\ldots ,6\right\}
 \]
 tuttavia potrei essere interessato, ad esempio, a trovare la probabilità che \textit{la somma delle due facce sia $ x $}. In questo caso posso usare una variabile aleatoria, che colleghi ogni possibile esito dell'esperimento ad un numero reale (in questo caso ad $ x+y $)
-\definizione{Variabile aleatoria}{
+\begin{definizione}{Variabile aleatoria}
 	Una \underline{variabile aleatoria reale} $ X $ è una funzione che collega ad ogni elemento di uno spazio campionario $ \Omega $ ad un numero reale:
 	\[
 		X: \Omega \to \R
 	\]
-}
+\end{definizione}
 inoltre una v.a. può essere discreta o continua
-\definizione{V.a. discreta e continua}{
+\begin{definizione}{V.a. discreta e continua}
 	Una variabile aleatoria si dice:
 	\begin{itemize}
 		\item \textit{Ddiscreta} se il numero di valori che può assumere è \underline{finito} o \underline{numerabile}
 		\item \textit{Continua} se assume un numero di valori \underline{più che numerabile}
 	\end{itemize}
-}
+\end{definizione}
 \subsubsection*{Esempi}
 \begin{itemize}
 	\item \textit{Discreta} Ad esempio, la variabile che associa al lancio di due dadi la somma dei numero usciti
@@ -496,7 +504,7 @@ Il medesimo discorso può essere fatto se si volesse calcolare la probabilità d
 	Pr\left( \text{somma} \in \left(a,b\right] \right) = Pr\left(\left\{\omega \in \Omega \text{ t.c. } a < X\left(\omega \right) \le b \right\}\right)
 \]
 La per descrivere la distribuzione di una variabile aleatoria può tornare comodo utilizzare un grafico, detto \underline{funzione di probabilità (o densità discreta)}
-\definizione{Funzione di probabilità discreta}{
+\begin{definizione}{Funzione di probabilità discreta}
 	Sia $ X $ una v.a. e sia $ R_x = \left\{z_1,z_2,\ldots \right\} $ l'insieme di tutti i valori che questa può assumere, allora la funzione seguente definita in $ \R  $ è detta \underline{funzione di probabilità} della v.a. $ X $.
 	\[
 		\mathrm{p}(x)=
@@ -506,11 +514,11 @@ La per descrivere la distribuzione di una variabile aleatoria può tornare comod
 		\end{cases}
 	\]
 	$ R_X $ è detto \underline{supporto} della v.a. $ X $
-}
+\end{definizione}
 \section{Variabili aleatorie discrete}
 \subsection{Variabile aleatoria di Bernoulli}
 Capita spesso di dover rappresentare un esperimento aleatorio che possa avere due esiti: \underline{successo o insuccesso}. Per modellare questo tipo di scenario è possibile adoperare la v.a. di Bernoulli, che associa ad ogni successo il valore $ 1 $ e ad ogni insuccesso il valore $ 0 $
-\definizione{Variabile aleatoria di bernoulli}{
+\begin{definizione}{Variabile aleatoria di bernoulli}
 	Una variabile aleatoria di Bernoulli è definita nel seguente modo:
 	\[
 		x\left(\omega \right)\begin{cases}
@@ -519,10 +527,10 @@ Capita spesso di dover rappresentare un esperimento aleatorio che possa avere du
 		\end{cases}
 	\]
 	Nota che $ Pr\left(1\right) = p $, mentre $ Pr\left(0\right) = 1-p $
-}
+\end{definizione}
 \subsection{Distribuzione binomiale}
-\label{vabinomiale} 
-\textbox{
+\label{vabinomiale}
+\tcbox{
 	Una distribuzione binomiale esprime il numero di successi ottenuti in $ N $ tentativi
 }
 
@@ -531,7 +539,7 @@ Si supponga che un certo esperimento venga replicato $N \geq 1$ volte e l'esito 
 \[
 	X=X_1+X_2+X_3+\cdots+X_N ?
 \]
-\definizione{Distribuzione Binomiale}{
+\begin{definizione}{Distribuzione Binomiale}
 	Si dice che una v.a. X si distribuisce secondo la distribuzione di probabilità (o legge) binomiale di parametri $N \geq 1$ (intero) e $ 0 \leq p \leq 1$, se
 	\[
 		\Pr(X=x)= \begin{cases}
@@ -540,14 +548,16 @@ Si supponga che un certo esperimento venga replicato $N \geq 1$ volte e l'esito 
 	\]
 	e scriveremo $X \sim \operatorname{Bi}(N, p)$.
 
-}
+\end{definizione}
 Nel caso speciale in cui $N=1$ la v.a. è chiamata anche v.a. di Bernoulli.
-\bigbox{
+
+\begin{tcolorbox}
 	La funzione di probabilità del numero totale di successi ottenuti in $N$ prove indipendenti con probabilità di successo pari a $p$ ad ogni prova è dato dalla distribuzione di probabilità di una v.a. binomiale
-}
+\end{tcolorbox}
+
 Si consideri una particolare realizzazione per cui il numero di successi è $x$, ad esempio l'allineamento
 \[
-  B=\{\underbracket[0.1ex]{A, A, \cdots, A}_{x \text { volte }} \underbracket[0.1ex]{A^c, A^c, \cdots, A^c}_{N-x \text { volte }}\}
+	B=\{\underbracket[0.1ex]{A, A, \cdots, A}_{x \text { volte }} \underbracket[0.1ex]{A^c, A^c, \cdots, A^c}_{N-x \text { volte }}\}
 \]
 Poiché le prove sono indipendenti la probabilità di questo allineamento è
 \[
@@ -567,19 +577,19 @@ e quindi
 			x
 		\end{array}\right) p^x(1-p)^{N-x}
 \]
-\teorema{Somma variabili Bernoulliane}{
+\begin{teorema}{Somma variabili Bernoulliane}
 	Siano $X_1, X_2, \cdots, X_N, N$ v.a. Bernoulliane Bi $(1, p)$ stocasticamente indipendenti allora la v.a. $X$ cosi definita
 	\[
 		X=\sum_{i=1}^n X_i
 	\]
 	è tale che $X \sim B i(N, p)$
-}
-\definizione{Funzione di ripartizione}{
+\end{teorema}
+\begin{definizione}{Funzione di ripartizione}
 	Sia $ X $ una v.a. Si dice \underline{funzione di ripartizione} della v.a. $ X $ la funzione $ y = F\left(x\right) $ definita per ogni $ x $ reale data da:
 	\[
 		F\left(x\right) =\Pr\left(X \le x\right) \quad  x \in  \R
 	\]
-}
+\end{definizione}
 Ad esempio, la funzione di ripartizione di una variabile aleatoria che che esprima la somma del lancio di due dadi sarebbe la funzione che in corrispondenza di ogni $ x $ andrebbe esprime la probabilità di ottenere una somma minore di $ x $. Nota che se una v.a. è discreta, posso convertire facilmente da funzione di ripartizione $ F\left(x\right) $ a funzione di probabilità $ p\left(X = x\right) $:
 \[
 	p\left(X = x\right)  = F\left(x\right) - F\left(x^{-}\right)
@@ -763,13 +773,14 @@ Ad esempio, calcolando la funzione $ f\left(x\right) $ avro che la sua corrispon
 %\pgfmathresult
 \subsection{Distribuzione geometrica}
 \label{vageometrica}
-\bigbox{
+\begin{tcolorbox}
 	\begin{center}
 		Una distribuzione geometrica esprime il numero di lanci necessari al fine di ottenere esattamente almeno un successo
 	\end{center}
-}
+\end{tcolorbox}
+
 Questa distribuzione è simile alla distribuzione binomiale. Anziché contare il numero di successi in $ N $ tentativi, si conta il numero di tentativi prima di ottenere un successo
-\begin{table}[h!]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{|>{\centering\arraybackslash}p{0.45\textwidth} >{\centering\arraybackslash}p{0.45\textwidth}|}
 		\hline
@@ -780,7 +791,7 @@ Questa distribuzione è simile alla distribuzione binomiale. Anziché contare il
 	\end{tabular}
 \end{table}
 Chiaramente, tutte le prove effettuate devono essere \underline{indipendenti}
-\definizione{Distribuzione Geometrica}{
+\begin{definizione}{Distribuzione Geometrica}
 	Si dice che una v.a. $ X $ si distribuisce secondo una distribuzione geometrica di parametro $ 0 \le  p \le  1 $ se la sua funzione di probabilità è :
 	\[
 		Pr\left(X = x\right) = \begin{cases}
@@ -789,7 +800,7 @@ Chiaramente, tutte le prove effettuate devono essere \underline{indipendenti}
 		\end{cases}
 	\]
 	scriveremo che $ X \sim  Ge \left(P\right) $
-}
+\end{definizione}
 NB: Talvola la variabile collega il numero di lanci necessari per ottenere un successo ($ n $). Altre volte la variabile collega il numero di insuccessi prima di ottenere un successo ($ n-1 $)
 \subsubsection*{Esempi distribuzioni geometriche}
 \begin{tikzpicture}
@@ -839,12 +850,14 @@ NB: Talvola la variabile collega il numero di lanci necessari per ottenere un su
 	\end{axis}
 \end{tikzpicture}
 \subsection{Distribuzione binomiale negativa}
-\bigbox{
+
+\begin{tcolorbox}
 	\begin{center}
 		Una distribuzione binomiale negativa esprime il numero di lanci necessari al fine di ottenere esattamente $ r $ successi
 	\end{center}
-}
-\definizione{Distribuzione binomiale negativa}{
+\end{tcolorbox}
+
+\begin{definizione}{Distribuzione binomiale negativa}
 	Si dice che una v.a. $ X $ si distribuisce secondo la distribuzione binomiale negativa di parametri $ 0 < p \le 1 $ e $ r \ge 1 $ (\underline{intero}) se la sua funzione di probabilità è data da:
 	\[
 		Pr\left(X = x\right) =
@@ -854,41 +867,42 @@ NB: Talvola la variabile collega il numero di lanci necessari per ottenere un su
 		\end{cases}
 	\]
 	e indichiamo con $ X \sim BinNe\left(r,p\right) $
-}
+\end{definizione}
 Nota che con $ r = 1 $ la distribuzione coincide con una \underline{variabile geometrica}.
-\teorema{Rapporto distribuzione binomiale e binomiale negativa}{
+\begin{teorema}{Rapporto distribuzione binomiale e binomiale negativa}
 	Sia $ X \sim BiNe\left(r,p\right) $ e $ Z \sim Bi\left(N,p\right) $, allora
 	\[
 		Pr\left(Z \ge r\right) =\Pr\left(X \le  N\right)
 	\]
-}
-\teorema{Rapporto distribuzione geometrica e binomiale negativa  }{
+\end{teorema}
+\begin{teorema}{Rapporto distribuzione geometrica e binomiale negativa  }
 	Siano $ X_1, X_2,\ldots ,X_r $ delle v.a. \underline{geometriche} stocasticamente indipendenti. Allora la variabile così definita:
 	\[
 		X = \sum_{i=1}^{r} X_i
 	\]
 	è una variabile di tipo binomiale negativo: $ X \sim BiNe\left(r,p\right) $
-}
- \subsection{Distribuzione di Poisson}
- \label{vapoisson} 
- \bigbox{
-   \begin{center}
-        Una distribuzione di Poisson esprime il numero di eventi successi in un determinato lasso di tempo/spazio 
-   \end{center}
- }
- Ad esempio, una v.a. di Poisson potrebbe eprimere il numero di camion che passano in un'ora su una data strada
-\definizione{Distribuzione di Poisson}{
-  Si dice che una v.a. $ X $ si distribuisce secondo la distribuzione di Poisson di parametri $ \lambda \ge 0 $ se la sua funzione di probabilità è data da: 
-  \[
-    \Pr \left(X = x\right) =
-    \begin{cases}
-    \displaystyle \frac{\lambda ^{x}}{x!} e^{-\lambda } & x \ge 0 \\
-    0 & \text{ altrove }
-    \end{cases}
-  \]
-}
+\end{teorema}
+\subsection{Distribuzione di Poisson}
+\label{vapoisson}
+\begin{tcolorbox}
+	\begin{center}
+		Una distribuzione di Poisson esprime il numero di eventi successi in un determinato lasso di tempo/spazio
+	\end{center}
+\end{tcolorbox}
+
+Ad esempio, una v.a. di Poisson potrebbe eprimere il numero di camion che passano in un'ora su una data strada
+\begin{definizione}{Distribuzione di Poisson}
+	Si dice che una v.a. $ X $ si distribuisce secondo la distribuzione di Poisson di parametri $ \lambda \ge 0 $ se la sua funzione di probabilità è data da:
+	\[
+		\Pr \left(X = x\right) =
+		\begin{cases}
+			\displaystyle \frac{\lambda ^{x}}{x!} e^{-\lambda } & x \ge 0          \\
+			0                                                   & \text{ altrove }
+		\end{cases}
+	\]
+\end{definizione}
 \section{Variabili aleatorie continue}
-\definizione{Densità di probabilità}{
+\begin{definizione}{Densità di probabilità}
 	se $ F $ è \underline{assolutamente continua} definziamo la \underline{densità} nel seguente modo:
 	\[
 		f\left(x\right) = F'\left(x\right)
@@ -897,7 +911,7 @@ Nota che con $ r = 1 $ la distribuzione coincide con una \underline{variabile ge
 	\[
 		\int_{a}^{b} f(x) \; dx
 	\]
-}
+\end{definizione}
 Nota che \underline{la funzione di ripartizione è una primitivà della funzione di densità}! L'area del trapezoide della funzione di densità esprime la probabilità del corrispettivo intervallo. La probabilità dell'intervallo $ \left(-\infty, a\right) $ è data da $ \int_{-\infty }^{a} f(x) \; dx $. Tuttavia la probabilità del medesimo intervallo è dato da $ F\left(a\right) $ dove $ F $ è la funzione di ripartizione. Ciò vuol dire che $ F'\left(x\right) = f\left(x\right) $ ossia $ F $ è una primitiva $ f $.
 \vskip3mm
 \subsubsection*{Esempio funzione di ripartizione e densità}
@@ -938,7 +952,11 @@ A sinistra la funzione di ripartizione, a destra la funzione di densità
 	\end{center}
 \end{minipage}
 
-\textbox{NB: useremo la teoria dell'integrazione di \underline{Riemann}, ma di solito si userebbe quella di \underline{Lebasgue}}
+\begin{tcolorbox}
+	\begin{center}
+		NB: useremo la teoria dell'integrazione di \underline{Riemann}, ma di solito si userebbe quella di \underline{Lebasgue}
+	\end{center}
+\end{tcolorbox}
 \subsubsection*{Esempio} Sia $\Omega=[0,1]$ e $\mathcal{A}=\mathcal{B}([0,1])$ la Tribù associata. Sia $\Pr$ la funzione di probabilità su $\mathcal{A}$ definita dalla funzione $F(x)$
 \[
 	F(x)= \begin{cases}0 & x<0 \\ x & 0 \leq x<1 \\ 1 & x \geq 1\end{cases}
@@ -1109,21 +1127,21 @@ La v.a. $Y$ è dotata di densità
 %\end{tabular}
 
 \subsection{Variabile aleatoria normale o gausiana}
-\label{vagaussiana} 
-\definizione{V.A. Gaussiana}{
-Si diche che una v.a. $ X $ si disttribuisce con legge di probabilità \underline{normale} (o Gaussiana) di parametri:
-\begin{itemize}
-	\item $ \mu \in \left(-\infty , +\infty \right) $
-	\item $ \sigma  \in \left(0, +\infty \right) $
-\end{itemize}
-se possiede la seguente densità
-\[
-	f\left(x, \mu , \omega \right) = \frac{1}{\sqrt{2 \pi \sigma ^2 }}e ^{\displaystyle-\frac{1}{2}\frac{\left(x-\mu \right)^2}{\sigma ^2 }}
-\]
-La indicheremo con $X \sim N \left(\mu , \sigma ^2 \right) $
-}
+\label{vagaussiana}
+\begin{definizione}{V.A. Gaussiana}
+	Si diche che una v.a. $ X $ si disttribuisce con legge di probabilità \underline{normale} (o Gaussiana) di parametri:
+	\begin{itemize}
+		\item $ \mu \in \left(-\infty , +\infty \right) $
+		\item $ \sigma  \in \left(0, +\infty \right) $
+	\end{itemize}
+	se possiede la seguente densità
+	\[
+		f\left(x, \mu , \omega \right) = \frac{1}{\sqrt{2 \pi \sigma ^2 }}e ^{\displaystyle-\frac{1}{2}\frac{\left(x-\mu \right)^2}{\sigma ^2 }}
+	\]
+	La indicheremo con $X \sim N \left(\mu , \sigma ^2 \right) $
+\end{definizione}
 Nota che a differenza delle v.a. discrete, quì stiamo parlando del grafico della \underline{densità} di probabilità, dunque questultima sarà espressa come area del trapezoide sotteso al suo grafico
-\textbox{  La variabile $ X \sim N\left(0,1\right) $ è chiamata \textit{Normale standard}}
+\tcbox{  La variabile $ X \sim N\left(0,1\right) $ è chiamata \textit{Normale standard}}
 \subsubsection*{Grafici}
 \begin{tikzpicture}
 	\begin{axis}[
@@ -1182,8 +1200,8 @@ Per questa ragione possiamo trasformare la nostra v.a. in una normale standard e
 	\item Vedo sulla tabella l'area della normale standard nell'intervallo $ \left(-\infty \frac{ c - \mu }{\sigma }\right] $
 \end{itemize}
 \subsection{Distribuzione Esponenziale}
-\label{vaesponenziale} 
-\definizione{Distribuzione esponenziale}{
+\label{vaesponenziale}
+\begin{definizione}{Distribuzione esponenziale}
 	Si diche che una v.a. $ X $ ha \underline{legge esponenziale} con parametro $  \lambda > 0 $ se la sua funzione di densità ha la forma:
 	\[
 		f\left(x;
@@ -1193,7 +1211,7 @@ Per questa ragione possiamo trasformare la nostra v.a. in una normale standard e
 		\end{cases}
 	\]
 	e la  indichiamo nel seguente modo $  X \sim \operatorname{Exp}\left(\lambda\right) $
-}
+\end{definizione}
 A differenza della v.a. Gaussiana, in questo caso è possibile ricavare l'espressione esplicita della funzione di ripartizione:
 \[
 	F\left(x\right) =
@@ -1202,7 +1220,7 @@ A differenza della v.a. Gaussiana, in questo caso è possibile ricavare l'espres
 		0                                                                   & x < 0
 	\end{cases}
 \]
-\textbox{Come la \textit{distribuzione geometrica}, anche quella esponenziale \underline{non ha memoria}}
+\tcbox{Come la \textit{distribuzione geometrica}, anche quella esponenziale \underline{non ha memoria}}
 \[
 	\begin{aligned}
 		\Pr(y<X \leq y+x \mid X>y) & =\frac{\Pr(\{y<X \leq y+x\} \cap\{X>y\})}{\Pr(\{X>y\})}  \\
@@ -1233,18 +1251,18 @@ A differenza della v.a. Gaussiana, in questo caso è possibile ricavare l'espres
 \end{tikzpicture}
 
 \subsection{Cheatsheet e cose che non ho voglia di dimostrare}
-\begin{table}[h!]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{|c c c|}
 		\hline
-		Variabile                                                         & Media                               & Varianza                               \\
+		Variabile                                                                         & Media                               & Varianza                               \\
 		\hline
-    \textit{Bernoulli} $ \mathcal{B} \left(p\right) $ & p & $ p \left(1-p\right) $ \\
-		\textit{Binomiale} $ Bi\left(N, p\right) $                        & $ N p $                             & $ Np \left(1-p\right) $                \\
-		\textit{Geometrica} $ \operatorname{Ge}\left(p\right) $            & $\displaystyle  \frac{1}{p} $       & $\displaystyle  \frac{1-p}{p^2 } $     \\
-        \textit{Poisson} $ \mathcal{P} \left(\lambda \right) $ & $ \lambda  $ & $ \lambda $ \\
-		\textit{Normale} $\displaystyle \mathcal{N} \left(\mu , \sigma ^2 \right) $ & $\displaystyle \mu  $               & $\displaystyle \sigma ^2  $             \\
-    \textit{Esponenziale} $ \displaystyle   \operatorname{Exp}\left(\lambda \right) $  & $\displaystyle \frac{1}{\lambda } $ & $\displaystyle \frac{1}{\lambda ^2 } $ \\
+		\textit{Bernoulli} $ \mathcal{B} \left(p\right) $                                 & p                                   & $ p \left(1-p\right) $                 \\
+		\textit{Binomiale} $ Bi\left(N, p\right) $                                        & $ N p $                             & $ Np \left(1-p\right) $                \\
+		\textit{Geometrica} $ \operatorname{Ge}\left(p\right) $                           & $\displaystyle  \frac{1}{p} $       & $\displaystyle  \frac{1-p}{p^2 } $     \\
+		\textit{Poisson} $ \mathcal{P} \left(\lambda \right) $                            & $ \lambda  $                        & $ \lambda $                            \\
+		\textit{Normale} $\displaystyle \mathcal{N} \left(\mu , \sigma ^2 \right) $       & $\displaystyle \mu  $               & $\displaystyle \sigma ^2  $            \\
+		\textit{Esponenziale} $ \displaystyle   \operatorname{Exp}\left(\lambda \right) $ & $\displaystyle \frac{1}{\lambda } $ & $\displaystyle \frac{1}{\lambda ^2 } $ \\
 		\hline
 	\end{tabular}
 \end{table}
@@ -1286,21 +1304,21 @@ Supponendo che la variabile $ X $ si distribuisca come qui a sinistra, la variab
 
 
 Non tutte le funzioni possono essere applicate come trasformazioni, in quanto deve essere possibile calcolare la probabilità su ogni valore assunto dalla variabile $ Y $ trasformata. Per fare ciò è necessario dover poter calcolare la probabilità sul suo insieme controimmagine sei valori assunti da $ X $ in corrispondenza del valore assunto da $ Y $. Formalmente:
-\definizione{Traformazione di una v.a.}{
+\begin{definizione}{Traformazione di una v.a.}
 	Consideriamo una funzione $  Y \left(\omega \right) = g\left(X \left(\omega \right)\right) $ dove $ g : \R  \to  \R  $. Se $ g $ è tale che
 	\[
 		\left\{ x \in  \R  : g\left(x\right) \le  z \right\} \in  \mathcal{B}\left(\R \right)\text{ per ogni }z \in  \R
 	\]
 	allora $ Y\left(\omega \right) $ è una variabile aleatoria
-}
+\end{definizione}
 visto che è difficile verificare se questa condizione è verificata, noi useremo il seguente teorema:
-\teorema{Funzioni utilizzabili per trasformazioni v.a.}{
+\begin{teorema}{Funzioni utilizzabili per trasformazioni v.a.}
 	Una funzione $ g\left(x\right) $ può essere utilizzata per effettuare una trasformazione di una v.a. se soddifa almeno una delle seguenti conidizoni:
 	\begin{itemize}
 		\item \underline{Continuità}
 		\item \underline{Monotonia} (\textit{crescente o decrescente})
 	\end{itemize}
-}
+\end{teorema}
 \label{requisiti trasformazione}
 Quindi formalmente, se poniamo:
 \[
@@ -1318,14 +1336,14 @@ mentre nel caso di una v.a. dotata di densità
 \[
 	\Pr(Y \leq y)=\int_{\{x: g(x) \leq y\}} f_X(x) d x
 \]
-\teorema{Densità di v.a. trasformata}{
+\begin{teorema}{Densità di v.a. trasformata}
 	Sia $X$ una v.a. con densità $f_X(x)$ con supporto l'intervallo $(a, b)$, eventualmente non limitato. Sia $g(x)$ una funzione strettamente monotona con derivata in $(a, b)$.
 	Allora la v.a. $Y=g(X)$ è dotata di densità
 	\[
 		f_Y(y)= \begin{cases}f_X\left(g^{-1}(y)\right)\left|D\left[g^{-1}(y)\right]\right| & \alpha<y<\beta \\ 0 & \text { altrove }\end{cases}
 	\]
 	dove $\alpha=\min (g(a), g(b))$ e $\beta=\max (g(a), g(b))$.
-}
+\end{teorema}
 \label{trasformazioni}
 \subsubsection*{Esempio}
 Sia $X$ una v.a. esponenziale di parametro $\lambda$. Sia $g(x)=e^x$. Allora applicando il teorema precedente abbiamo
@@ -1455,31 +1473,32 @@ Spesso ha senso descrivere il modo in cui si distribuisce una variabile aleatori
 	\item quantili
 	\item momenti (centrari e non centrati)
 \end{itemize}
-\begin{table}[h!]
+\begin{table}[H]
 	\centering
-	\begin{tabular}{|c c c c|}
-		\hline
+	\begin{tabular}{c c c c}
+		\toprule
 		scala      & moda        & quantili     & momenti     \\
+		\midrule
 		nominale   & $ \times $  &              &             \\
 		ordinale   & $ \times $  & $ \times  $  &             \\
 		intervallo & $ \times  $ & $ \times  $  & $ \times  $ \\
 		rapporto   & $ \times  $ & $  \times  $ & $ \times  $ \\
-		\hline
+		\bottomrule
 	\end{tabular}
 \end{table}
 \subsubsection*{Moda}
-\definizione{Moda}{
+\begin{definizione}{Moda}
 	Si dice moda, indicata con $  Mo\left(X\right) $ di una v.a. $ X $ l'esito che si presenta più frequentemente
-}
+\end{definizione}
 Nel caso di una v.a. discreta, sarà l'esito uscito più volte, mentre nel caso di una v.a. continua sarà il valore di $ x $ in corrispondenza del massimo della sua funzione di densità
 \subsubsection*{Quantili}
 I quantili indicana il primo esito $ x_{\alpha } $ tale per cui la probabilità che esca un esito $ \le  x_{\alpha } $ è $ \alpha $. Formalmente:
-\definizione{Quantile}{
+\begin{definizione}{Quantile}
 	Si dice qualtile di ordine $  a \le  \alpha  \le  1 $ di una v.a. $ X $ l'esito dell'esperimento $ Q_{\alpha }= x_{\alpha } $ tale che:
 	\[
 		Pr\left(X \le  x_{\alpha }\right) \ge  \alpha \text{ e }\Pr\left(X \ge  x_{\alpha }\right) \ge  1 - \alpha
 	\]
-}
+\end{definizione}
 Ad esempio considera la seguente distribuzione gaussiana standard:
 \vskip3mm
 \begin{center}
@@ -1513,15 +1532,15 @@ In particolare, abbiamo:
 	      \end{itemize}
 \end{itemize}
 Il \textit{secondo quartile} ha un'importanza fundamentale: questo viene chiamato mediana, in quanto divide in due il grafico della densità: gli eventi a destra della mediana hanno la stessa probabilità di accadere rispetto a quelli a sinistra
-\definizione{Mediana}{
+\begin{definizione}{Mediana}
 	La mediana di una v.a. corrisponde al suo \underline{secondo quartile}, ossia l'esito $ x $ di un esperimento tale che:
 	\[
 		Pr\left(X \le x\right) =\Pr\left(X \ge  x\right)
 	\]
-}
+\end{definizione}
 \subsubsection*{Momenti}
 L'ultimo valore di sintesi è quello dei \underline{momenti}. Questo tipo di valore di sintesi permette di ricavarne altri, estremamemnte significativi. Alla base del concetto di momento vi è quello di speranza matematica:
-\definizione{Speranza matematica}{
+\begin{definizione}{Speranza matematica}
 	Sia $  X  $una v.a. dotata di densità (\textit{diescreto o continua}). Si chiama speranza matematica di $ X $ la quantità (\textit{finita}):
 
 	\begin{minipage}[t]{0.48\textwidth}
@@ -1541,9 +1560,9 @@ L'ultimo valore di sintesi è quello dei \underline{momenti}. Questo tipo di val
 			Se $ X $ è \textit{continua}
 		\end{center}
 	\end{minipage}
-}
+\end{definizione}
 Questo tipo di calcolo equivale ad una sorta di \textit{media ponderata}. Il valore dunque indica il valore attorno al quale sono distribuiti la maggior parte dei risultati
-\teorema{Calcolo speranza matematica}{
+\begin{teorema}{Calcolo speranza matematica}
 	Sia $ X $ una v.a. e sia $ g\left(x\right) $ una funzione che soddisfi i requisiti (teo \ref{requisiti trasformazione} ) affinchè questa possa essere usata per effettuare una trasformazione di $ X $. Allora
 	\[
 		\mathbb{E} \left(g\left(X\right)\right) =
@@ -1552,11 +1571,12 @@ Questo tipo di calcolo equivale ad una sorta di \textit{media ponderata}. Il val
 			\int_{Ry} xf_{Y}\left(x\right) \; dx = \int_{Rx} g\left(x\right)f_{X}\left(x\right) \; dx & \text{ se } X \text{ è continua }
 		\end{cases}
 	\]
-}
+\end{teorema}
 Convincitene come segue
-\bigbox{
+\begin{tcolorbox}
 	Il peso della modalità $ g\left(a\right) $, nel calcolo della speranza di $ g\left(X\right) $, è la \underline{somma dei pesi delle controimmagini} di $ g\left(a\right) $ tramite la funzione $ g $
-}
+\end{tcolorbox}
+
 E' facile convincersene informalmente. Ragiona così:
 \begin{itemize}
 	\item La speranza matematica è una media ponderata fra l'$ x $ corrispondente ad un esito e la sua probabilità
@@ -1572,18 +1592,18 @@ E' facile convincersene informalmente. Ragiona così:
 	      \end{align*}
 	      dunque nota come alla fine, \underline{il peso che avrà} $ 2 $ nella media, è la somma dei pesi che avrebbero le \underline{controimmagini di 2}, il che ha senso
 \end{itemize}
-\definizione{Momento non centrato}{
+\begin{definizione}{Momento non centrato}
 	Sia $ X $ un v.a., si dice momento \textit{non centrato} di ordine $ r $ ($ r $ intero positivo) il valore:
 	\[
 		\mu _r = \mathbb{E} \left(X^{r}\right)
 	\]
-}
-\definizione{Momento centrato}{
+\end{definizione}
+\begin{definizione}{Momento centrato}
 	Sia $ X $ un v.a., si dice momento \textit{centrato} di ordine $ r $ ($ r $ intero positivo) il valore:
 	\[
 		\mu _r = \mathbb{E} \left(\left(X - \mu_1\right)^{r}\right)
 	\]
-}
+\end{definizione}
 Vedremo che $ \mu_1 $ è la media di una v.a. Ciò è significativo in quanto la applicando la trasformazione $ X - \mu_1 $ \textit{trasliamo} la densità della v.a. facendo si che la sua media cada in $ x=0 $
 \subsubsection*{Valori di sinetesi basati sui momenti}
 I seguenti valori di sintesi di basano sui momenti:
@@ -1627,7 +1647,7 @@ I seguenti valori di sintesi di basano sui momenti:
 	      \]
 \end{itemize}
 \section{Variabili aleatorie doppie}
-\definizione{Variabile aleatoria doppia}{
+\begin{definizione}{Variabile aleatoria doppia}
 	Sia $ \left(\omega , \mathcal{A}, \Pr\right) $ uno spazio \textit{probabilizzato}. Siano $ X\left(\omega \right) $ e $ Y\left(\omega \right) $ due v.a. definite su $ \omega  $ in modo che:
 	\[
 		Z \left(\omega \right) = \left(X \left(\omega \right), Y \left(\omega \right)\right): \omega  \to  \R ^2
@@ -1636,10 +1656,10 @@ I seguenti valori di sintesi di basano sui momenti:
 	\[
 		F_Z \left(z\right) = F_{X, Y} \left(x,y\right) = \Pr\left(\omega  : \left\{ X \le  x\right\} \cap  \left\{ Y \le  y\right\}\right)
 	\]
-}
+\end{definizione}
 Nel caso di una v.a. discreta, la probabilità dell'evento $ \left(x,y\right) $ è data dalla probabilità che avvengano sia $ x $ che $ y $
 \subsection{V.a. doppie discrete}
-\definizione{Probabilità di v.a. doppia discreta}{
+\begin{definizione}{Probabilità di v.a. doppia discreta}
 	per due v.a. discrete $ X $ e $ Y $, la v.a. doppai $ Z = \left(X, Y\right)$ (\textit{che è discreta}) ha funzione di probabilità:
 	\[
 		p_{Z}\left(z\right) = \begin{cases}
@@ -1647,7 +1667,7 @@ Nel caso di una v.a. discreta, la probabilità dell'evento $ \left(x,y\right) $ 
 			0                                                                                                                                                   & \text{ altrove }
 		\end{cases}
 	\]
-}
+\end{definizione}
 Nota che vale la seguente:
 \[
 	\Pr \left(x_1 <  X \le  x_2, y_1 < Y \le  y_2\right) = F_{X, Y} \left(x_2, y_2\right) - F_{X,Y}\left(x_1, y_2\right) - F_{X,Y}\left(x_2,y_1\right) + F_{X,Y}\left(x_1,y_1\right)
@@ -1698,7 +1718,7 @@ e quindi
 	F_X(x)=\sum_{u \leq x} \sum_{y \in R_Y} p_{X, Y}(u, y) \quad F_Y(y)=\sum_{v \leq y} \sum_{x \in R_X} p_{X, Y}(x, v)
 \]
 \subsection{V.a. doppie continue}
-\definizione{Probabilità di v.a. doppia discreta}{
+\begin{definizione}{Probabilità di v.a. doppia discreta}
 	La v.a. doppia $Z=(X, Y)$ si dirà dotata di densità se esiste una funzione $f_{X, Y}(x, y)$ tale che
 	- $f_{X, Y}(x, y) \geq 0, \forall(x, y) \in \mathbb{R}^2$
 	\[
@@ -1708,7 +1728,7 @@ e quindi
 	\[
 		\Pr(a<x \leq b, c<y \leq d)=\int_a^b \int_c^d f_{X, Y}(x, y) d x d y
 	\]
-}
+\end{definizione}
 Tale funzione è chiamata densità congiunta $f_Z(z)=f_{X, Y}(x, y)$.
 Da cui abbiamo
 \[
@@ -1732,12 +1752,12 @@ Intuitivamente, la probabilità che $ X \in  \left(a,b\right) $ e $ Y \in \left(
 	\end{axis}
 \end{tikzpicture}
 \subsection{V.a. condizionata}
-\definizione{Distribuzione condizionata di una v.a.}{
+\begin{definizione}{Distribuzione condizionata di una v.a.}
 	Sia $ \left(\omega , \mathcal{A}, Pr\right) $ uno spazio \underline{probabilizzato}. Sia $ X\left(\omega \right) $ e $ Y\left(\omega \right) $ due v.a. \underline{discrete}. Allora la funzione di probabilità sullo spazio di arrivo è così definita:
 	\[
 		P_{X | Y} \left(x|y\right) = \frac{P\left(\left\{ X = x\right\} \cap \left\{Y = y\right\}\right)}{P\left(\left\{Y = y\right\}\right)} = \frac{P_{x,y}\left(x,y\right)}{ P_{y} \left(y\right)}
 	\]
-}
+\end{definizione}
 Nota che possiamo definire una v.a. nel modo seguente:
 \vskip3mm
 Sia $ \left(X, Y\right) \sim P_{x,y} \left(x,y\right) $ \underline{discreta}. Allora
@@ -1772,7 +1792,8 @@ La funzione di probabilità $ p_{x,y} \left(x,y\right) $ associa ad ogni numero 
 				\hline
 				            & \multicolumn{3}{c|}{$Y(\omega)$}                                   \\
 				$X(\omega)$ & 0                                & 1             & 2               \\
-				\hline 1    & $\frac{1}{6}$                    & 0             & 0               \\
+				\hline
+				1           & $\frac{1}{6}$                    & 0             & 0               \\
 				2           & 0                                & $\frac{1}{6}$ & 0               \\
 				3           & $\frac{1}{6}$                    & 0             & 0               \\
 				4           & 0                                & 0             & $\frac{1}{6}$   \\
@@ -1860,25 +1881,26 @@ Data una v.a. condizionale, possiamo definire una seconda variabile aleatoria da
 \end{minipage}
 \vskip3mm
 La media di $ \mathbb{E} \left(X | Y\right) $ gode della seguente proprietà:
-\teorema{Tower property}{
+\begin{teorema}{Tower property}
 	Date due v.a. $ X $ e $ Y $ e la loro funzione di probabilità condizionata, allora:
 	\[
 		\mathbb{E}\left(\mathbb{E}\left(X|Y\right)\right) = \mathbb{E}\left(X\right)
 	\]
 	dove $ \mathbb{E}\left(X|Y\right) $ è la v.a. $ \mathbb{E} \left(X | Y = y\right) $
-}
+\end{teorema}
 \subsubsection*{Dimostrazione}
 \begin{align*}
 	\mathbb{E}(\mathbb{E}(X \mid Y)) & =\sum_{y \in R_Y}\left[\sum_{x \in R_x} x p_{X \mid Y}(x \mid y)\right] p_Y(y) \\
 	                                 & =\sum_{y \in R_Y} \sum_{x \in R_x} x p_{X \mid Y}(x \mid y) p_Y(y)             \\ & =\sum_{y \in R_Y} \sum_{x \in R_x} x p_{X, Y}(x, y) \\ & =\sum_{x \in R_x} x \sum_{y \in R_Y} p_{X, Y}(x, y) \\ & =\sum_{x \in R_x} x p_X(x)=\mathbb{E}(X)
 \end{align*}
-\teorema{Teorema di composizione della varianza}{
+
+\begin{teorema}{Teorema di composizione della varianza}
 	Date due v.a. $ X $ e $ Y $ e la loro funzione di probabilità condizionata, allora:
 	\[
 		\operatorname{Var}\left(X\right) = E\left(\operatorname{Var}\left(X|Y\right)\right) + \operatorname{Var} \left(E\left(X|Y\right)\right)
 	\]
 	dove $ \mathbb{E} \left(X |Y\right)$ è la v.a. $\mathbb{E}\left(X|Y = y\right) $
-}\label{Composizione della varianza}
+\end{teorema} \label{Composizione della varianza}
 \subsubsection*{Dimosrazione}
 Partiamo dalla definizione di varianza:
 \[
@@ -1925,23 +1947,23 @@ Se non avessimo conosciuto la distribuzione di $ X $, avremmo potuto utilizzare 
 \]
 \subsection{Misure di dipendenza fra v.a.}
 Si possono definire degli indici per quantificare quanto e come una variabile aleatoria $ X $ influenzi il risultato di una variabile aleatoria $ Y $
-\definizione{Indipendenza stocastica fra v.a.}{
+\begin{definizione}{Indipendenza stocastica fra v.a.}
 	$ \left(X, Y\right) $ sono \underline{stocasticamente indipendenti} se
 	\[
 		P_{X, Y} \left(x,y\right) = P_{X }\left(x\right) P_{Y}\left(y\right) \quad  \forall \left(x,y\right) \in  R_X \times R_Y
 	\]
-}
+\end{definizione}
 
 Nota che se due variabili sono stocasticamente indipendenti vale che:
 \[
 	P\left(X|Y\right) = \frac{P_{X,Y}\left(x,y\right)}{P\left(y\right)} = \frac{P_X\left(x\right) \cdot  P_Y\left(y\right)}{P_Y\left(y\right)} = P_X\left(x\right)
 \]
-\definizione{Indipendenza in media}{
+\begin{definizione}{Indipendenza in media}
 	Date $ \left(X,Y\right) $ si dice che $ X $ è \underline{indipendente in media} da $ Y $ se :
 	\[
 		\mathbb{E}\left(X|Y=y\right) = \mathbb{E} \left(X\right) \forall y \in  R_Y
 	\]
-}
+\end{definizione}
 Mentre l'indipendenza stocastica indica che un evento $ y $ non influenza in alcun modo un evento $ x $, l'indipendenza in media indica che un evento $ y $ non influenza la media nel verificarsi di $ x $ dato $ y $
 \vskip3mm
 Nota bene che:
@@ -1950,13 +1972,13 @@ Nota bene che:
 	\item Se due v.a. sono stocasticamente indipendenti, allora lo sono anche in media
 \end{itemize}
 Inoltre è possibile quantificare quanto la media di una variabile $ X $ sia influenzata da quella di un'altra $ Y $ tramite l'\textit{indice di dipendenza in media}
-\definizione{Rapporto di correlazione}{
-Sia $ \left(X, Y\right) $ una v.a. doppia discreta, si chiama rapporto di correlazione di $ X $ dato $ Y $
-\[
-	n^2 _{X|Y} = \frac{\operatorname{Var} \left(\mathbb{E}\left(X|Y\right)\right)}{\operatorname{Var}\left(X\right)} = 1 - \frac{\mathbb{E}\left(\operatorname{Var} \left(\mathbb{E}\left(X|Y\right)\right)\right)}{\operatorname{Var}\left(X\right)} \quad  \operatorname{Var} \left(X\right) > 0
-\]
-in modo analogo si definisce $ n^{2}_{Y|X} $
-}
+\begin{definizione}{Rapporto di correlazione}
+	Sia $ \left(X, Y\right) $ una v.a. doppia discreta, si chiama rapporto di correlazione di $ X $ dato $ Y $
+	\[
+		n^2 _{X|Y} = \frac{\operatorname{Var} \left(\mathbb{E}\left(X|Y\right)\right)}{\operatorname{Var}\left(X\right)} = 1 - \frac{\mathbb{E}\left(\operatorname{Var} \left(\mathbb{E}\left(X|Y\right)\right)\right)}{\operatorname{Var}\left(X\right)} \quad  \operatorname{Var} \left(X\right) > 0
+	\]
+	in modo analogo si definisce $ n^{2}_{Y|X} $
+\end{definizione}
 Dalla formula della scomposizione della varianza è facile vedere che
 \[
 	0 \leq \eta_{X \mid Y}^2 \leq 1
@@ -1967,7 +1989,7 @@ inoltre
 	\item se $\eta_{X \mid Y}^2>0$ allora $X$ è dipendente in media da $Y$;
 	\item $\eta_{X \mid Y}^2=1$ se e solo se $\Pr(X=\mathbb{E}(X \mid Y))=1$.
 \end{itemize}
-\definizione{Covarianza e correlazione}{
+\begin{definizione}{Covarianza e correlazione}
 	La covarianza e la correlazione sono altri due indici di dipendenza (lineare) tra due v.a..
 	\[
 		\mathbb{C}ov(X, Y)=\mathbb{E}(X \cdot Y)-\mathbb{E}(X) \cdot \mathbb{E}(Y)
@@ -1976,23 +1998,23 @@ inoltre
 	\[
 		\rho(X, Y)=\frac{\mathbb{C}ov(X, Y)}{\sqrt{\mathbb{V}ar(X) \cdot \mathbb{V} a r(Y)}}
 	\]
-}
-\teorema{Varianza di una combinazione lineare di v.a.}{
+\end{definizione}
+\begin{teorema}{Varianza di una combinazione lineare di v.a.}
 	Sia $(X, Y)$ una v.a. doppia e $ a $ e $ b $ due costanti. Allora
 	\[
 		\mathbb{V} a r(a X+b Y)=a^2 \mathbb{V} a r(X)+b^2 \mathbb{V} a r(Y)+2 a b \mathbb{C} o v(X, Y)
 	\]
-}
+\end{teorema}
 \section{Teoremi limite della probabilità}
 \subsection{La legge dei grandi numeri}
 Immaginiamo di lanciare un dado $ n $ volte. Intuitivamente avremo che il numero di volte che è uscito il numero $ 3 $, fratto il numero di lanci, per $ n $ "molto grande", convergerà alla probabilità che esca $ 3 $. Questo è proprio il ragionamento intuitivo alla base della legge dei grandi numeri
-\definizione{Convergenza in probabilità (o debole)}{
+\begin{definizione}{Convergenza in probabilità (o debole)}
 	Sia $ S $ una v.a. binomiale (che conta il numero di successi in $ n $ tentativi). Sia $ p $ la probabilità del successo. Allora si dice che per $ n \to  \infty  $ la v.a. \underline{converge in probabilità}, ossia accade che per $ \varepsilon $ piccolo a piacere:
 	\[
 		\lim_{n \to \infty} \Pr\left\{\left|\frac{S_n}{n} - p\right| \ge \epsilon \right\} = 0
 	\]
 	In simboli si scrive che $ \frac{S_n}{n} \xrightarrow{p} p   $
-}
+\end{definizione}
 Si può dire equivalentemente che $ Z_i \xrightarrow{p}Z  $ se:
 \[
 	\lim_{i \to \infty} Pr\left( \left|Z_i - Z\right| > \epsilon \right) = 0
@@ -2000,39 +2022,39 @@ Si può dire equivalentemente che $ Z_i \xrightarrow{p}Z  $ se:
 per ogni $ \epsilon  $ piccolo a piacere
 \vskip3mm
 Allo stesso modo, se fossimo interessati agli scotamenti al quadrato, potremmo ricorrere al concetto di convergenza in media quadratica
-\definizione{Convergenza in media quadratica}{
+\begin{definizione}{Convergenza in media quadratica}
 	Sia $ S $ una v.a. binomiale (che conta il numero di successi in $ n $ tentativi). Sia $ p $ la probabilità del successo. Allora si dice che per $ n \to  \infty  $ la v.a. \underline{converge in media}, ossia accade che per $ \varepsilon $ piccolo a piacere:
 	\[
 		\lim_{n \to \infty} \mathbb{E}\left[\left(\frac{S_n}{n} - p\right)^2 \right] = 0
 	\]
 	In simboli si scrive che $ \frac{S_n}{n} \xrightarrow{m.q.} p   $
-}
+\end{definizione}
 Anche in questo caso si può scrivere che $ Z _i \xrightarrow{m.q} Z $ se
 \[
 	\lim_{n \to \infty } \mathbb{E} \left[\left(Z_n - Z\right)^2 \right] = 0
 \]
-\teorema{Convergenza in media e in probabilità}{
+\begin{teorema}{Convergenza in media e in probabilità}
 	La convergenza in media quadratica implica la convergenza in probabilità, ma non viceversa:
 	\[
 		Y_n \xrightarrow{m.q.} Y \Rightarrow Y_n \xrightarrow{P} Y
 	\]
-}
+\end{teorema}
 \subsubsection*{Somma variabili aleatorie e teoremi utili in statistica}
 
-\teorema{Media e varianza della maedia campionaria}{
+\begin{teorema}{Media e varianza della maedia campionaria}
 	Siano $Y_1, \ldots, Y_n$ v.c. indipendenti, tutte con valore atteso $\mu$ e varianza $\sigma^2$ e sia $\bar{Y}_n=\sum_{i=1}^n Y_i / n$. Allora
 	\begin{align*}
 		\mathbb{E}\left(\bar{Y}_n\right)         & =\sum_{i=1}^n \frac{\mathbb{E}\left(Y_i\right)}{n}=n \frac{\mu}{n}=\mu,                              \\
 		\operatorname{Var}\left(\bar{Y}_n\right) & =\sum_{i=1}^n \frac{\mathbb{V} a r\left(Y_i\right)}{n^2}=n \frac{\sigma^2}{n^2}=\frac{\sigma^2}{n} .
 	\end{align*}
-}
-\teorema{Legge debole dei grandi numeri }{
+\end{teorema}
+\begin{teorema}{Legge debole dei grandi numeri }
 	Sia $Y_1, Y_2, \ldots$ una successione di v.c. indipendenti, ciascuna con valore atteso $\mu$ e varianza $\sigma^2$. Sia $\bar{Y}_n=\sum_{i=1}^n Y_i / n$, allora, per ogni $\varepsilon>0$,
 	\[
 		\lim _{n \rightarrow \infty} \Pr\left\{\left|\bar{Y}_n-\mu\right| \geq \varepsilon\right\}=0,
 	\]
 	ovvero $\bar{Y}_n \stackrel{P}{\longrightarrow} \mu$.
-}
+\end{teorema}
 Questo esprime il seguente concetto intuitivo: se ripetiamo $ n $ volte un esperimento che ha probabilità $ p $ di dare successo, allora la media campionaria tenderà a $ p $ per $ n $ molto grande, ossia:
 \[
 	\frac{\text{numero successi}}{\text{numero tentativi}} \to p \quad \text{ per } n \text{ molto grande }
@@ -2042,7 +2064,7 @@ Questo esprime il seguente concetto intuitivo: se ripetiamo $ n $ volte un esper
 	\mathbb{E} \left[\left(Y - \mu \right)^2 \right] = \operatorname{Var}\left(\overline{Y}_n\right) = \frac{\sigma ^2 }{n}  \to  0
 \]
 \subsubsection*{Teorema del limite centrale}
-\teorema{Teorema del limite centrale}{
+\begin{teorema}{Teorema del limite centrale}
 	Sia $Y_1, Y_2, \ldots$ una successione di v.c. ciascuna con $\mathbb{E}\left(Y_i\right)=\mu $ e $ \mathbb{V} a r\left(Y_i\right)=\sigma^2$. Allora, posto $Z_n=$ $\sqrt{n}\left(\bar{Y}_n-\mu\right) / \sigma$, per ogni $z$
 	\[
 		\lim _{n \rightarrow \infty} \operatorname{Pr}\left(Z_n \leq z\right)=\frac{1}{\sqrt{2 \pi}} \int_{-\infty}^z e^{-t^2 / 2} d t .
@@ -2057,7 +2079,7 @@ Questo esprime il seguente concetto intuitivo: se ripetiamo $ n $ volte un esper
 		\bar{Y}_n \stackrel{a}{\sim} \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)
 	\]
 	dove $\stackrel{a}{\sim}$ significa "distribuita approssimatamente".
-}
+\end{teorema}
 In poche parole, si intende che per valori di $ n $ molto grandi, una v.a. che rappresenta la \underline{media} di una distribuzione binomiale può essere approssimata con una distribuzione \underline{normale di parametri} $ \mu  $ e $ \frac{\sigma ^2 }{n} $
 \subsubsection*{Approssimazione binomiale con v.a. normale}
 Se sono verificare le seguenti condizioni posso approssimare una v.a. binomiale con una normale:
@@ -2066,30 +2088,30 @@ Se sono verificare le seguenti condizioni posso approssimare una v.a. binomiale 
 	\item $ p $ e $ 1-p $ sono piuttosto lontani da 0
 	\item L'intervallo $ \left[np \pm \sqrt{np\left(1-p\right)}\right] $ è contenuto nell'intervallo $ \left[0,n\right] $
 \end{itemize}
-\teorema{Approssimazione della binomiale con una normale}{
+\begin{teorema}{Approssimazione della binomiale con una normale}
 	Una v.a. $ X \sim \mathcal{B}\left(n,p\right) $ si può approssimare con una v.a. normale con parametri di valore :
 	\[
 		\mu  = np \quad  \sigma ^2  = np\left(1-p\right)
 	\]
 	Nel calolo del valore standardizzato devo aggiungere la cosiddetta \underline{correzione per continuità} = $ 0.5 $, che migliora la precisione dell'approssimazione
-}
+\end{teorema}
 Ad esempio data $ X \sim \mathcal{B}\left(n, p\right) $, se dovessi calcolare $ \Pr \left(X < 25\right) $ allora il valore standardizzato di 25 è
 \[
 	\frac{\left(25 + \textbf{0.5}\right) - \mu }{ \sigma } =  \frac{\left(25 + \textbf{0.5}\right) - np}{\sqrt{np\left(1-p\right)}}
 \]
 \subsubsection*{Diseguaglianze utili}
-\teorema{Disuguaglianza di Markov}{
+\begin{teorema}{Disuguaglianza di Markov}
 	Sia $ Y $ una v.a. che assume valori \underline{non negativi}, allora per ogni numero reale $ a > 0 $ si ha che :
 	\[
 		\Pr \left(Y \ge  a\right) \le  \frac{\mathbb{E}\left(Y\right)}{a}
 	\]
-}
-\teorema{Disuguaglianza di Chebychev}{
+\end{teorema}
+\begin{teorema}{Disuguaglianza di Chebychev}
 	Sia $ Y $ una v.a. con valore atteso $ \mathbb{E}\left(Y\right) = \mu  $ e varianza $ Var \left(Y\right) = \sigma ^2  $, allora:
 	\[
 		\Pr \left(\left|Y - \mu \right| \ge  \epsilon \right) \le  \frac{\sigma  ^2 }{ \mu^2 }
 	\]
-}
+\end{teorema}
 Tali disuguaglianze sono molto utili in quanto ci permettono di conoscere "i limiti" di una v.a., senza tuttavia conoscerne la sua distribuzione.
 \subsubsection*{Esempio utilizzo diseguaglianze}
 Supponiamo che una v.a. $ X $ conti il numero di auto prodotte in una settimana da una fabbrica. Sappiamo che in media ne vengono prodotte 50, ossia $ \mathbb{E}\left(X\right) = 50 $. Allora possiamo affermare che
@@ -2138,16 +2160,16 @@ Tramite l'inferenza statistica, vogliamo utilizzare dei dati raccolti per poter 
 	\end{tikzpicture}
 \end{center}
 \subsection{Stima e stimatore e metodo dei momenti}
-\definizione{Stima}{
+\begin{definizione}{Stima}
 	Definiamo \underline{stima} di un parametro un \underline{valore numerico} che può essere ottenuto dai dati raccolti
-}
-\definizione{Stimatore}{
+\end{definizione}
+\begin{definizione}{Stimatore}
 	Uno stimatore è una qualsiasi \underline{funzione} che prenda in input i dati di un campione e stimi il valore di un determinato parametro.
 	\vskip3mm
 	Uno stimatore può essere visto anche come una v.a. funzione delle variabili aleatorie che generano i valori osservati nel campione.
 	\vskip3mm
 	Uno stimatore di un parametro $ \theta $ viene indicato con $ \hat{\theta} $. Talvola $ \hat{\theta } $ indica anche \underline{la stima} del parametro
-}
+\end{definizione}
 Ad esempio, suppongo di aver una fabbrica che produce lastre di metallo e ottengo i seguenti valori:
 \begin{center}
 	\begin{tabular}{|ccccc|}
@@ -2163,27 +2185,27 @@ in questo caso posso creare uno stimatore della media con il metodo che viene se
 dove $ x_1, \ldots x_5 $ sono le v.a. che indicano lo spessore dell'i-esima lastra
 \subsubsection*{Proprietà stimatori}
 Idealmente, uno stimatore dovrebbe essere uguale al valore del parametro teorico (ad esempio $ \hat{\mu } = \mu  $). Tuttavia questo non ha senso in quanto implicherebbe di conoscere con certezza il parametro da stimare. Un requisito più ragionevole è la \underline{non distorsione}
-\definizione{Non distorsione di uno stimatore}{
+\begin{definizione}{Non distorsione di uno stimatore}
 	Uno stimatore $ \hat{\theta } $ si dice \underline{non distorto} se
 	\[
 		\mathbb{E}\left[\left(\hat{ \theta } - \theta \right)\right] = \mathbb{E} \left(\hat{\theta }\right) - \theta = 0
 	\]
 	ossia gli errori in media di compensano, o meglio, le imprecisioni di distribuiscono in \underline{manira simmetrica} attorno al valore teorico
-}
+\end{definizione}
 se invece siamo interessati a capire di quanto erra in media uno stimatore possiamo ricorrere al concetto di \underline{errore quadratico medio}
-\definizione{Errore quadratico medio di uno stimatore}{
+\begin{definizione}{Errore quadratico medio di uno stimatore}
 	L'\underline{errore quadratico medio} di uno stimatore $ \hat{\theta } $ è così definito:
 	\[
 		EQM\left(\hat{\theta }\right) = \mathbb{E}\left[\left(\hat{ \theta } - \theta  \right)^2 \right]
 	\]
 	Dati due simatori è da preferire in genere quello con l'errore quadratico medio \underline{minore}
-}
+\end{definizione}
 Nota che:
 \[
 	EQM\left(\hat{\theta }\right) = \underbracket[0.1ex]{\Var \left(\hat{ \theta }\right)}_{\text{ varianza }} + \underbracket[0.1ex]{\left(\mathbb{E}\left(\hat{\theta }  \right)- \theta\right)^2}_{\text{ distorsione }}
 \]
 \subsubsection*{Consistenza stimatori}
-\definizione{Consistenza stimatorii}{
+\begin{definizione}{Consistenza stimatorii}
 	Uno stimatore si dice \underline{consistente media quadratica} se
 	\[
 		EQM \left(\hat{\theta }\right) \to 0
@@ -2192,20 +2214,20 @@ Nota che:
 	\[
 		\hat{ \theta } \xrightarrow{P}  \theta
 	\]
-}
+\end{definizione}
 Nota che ha senso parlare di convergenza in quanto ogni osservazione (ad esempio ogni misura di una lastra di metallo), corrisponde ad una v.a. Dunque uno stimatore sarà dato da una funzione di $ n $ v.a.
 \subsubsection*{Metodo dei momenti}
 Un modo per "creare" degli stimatori è secondo il metodo dei momenti. Innanzitutto diamo la definizione di momento campionario:
-\definizione{Momento campionario}{
-Il momento campionario di ordine $ r $ è così definito:
-\[
-	\mu _r = \frac{1}{n}\sum_{i=1}^{n} X_i^{r}
-\]
-se dovessi calcolare il momento capionario di una trasformazione $ g\left(X\right) $ di v.a. (ad esempio il momento centrato), allora vale che
-\[
-	\mu _r = \frac{1}{n} \sum_{i=1}^{n} g\left(X_i\right)^{r}
-\]
-}
+\begin{definizione}{Momento campionario}
+	Il momento campionario di ordine $ r $ è così definito:
+	\[
+		\mu _r = \frac{1}{n}\sum_{i=1}^{n} X_i^{r}
+	\]
+	se dovessi calcolare il momento capionario di una trasformazione $ g\left(X\right) $ di v.a. (ad esempio il momento centrato), allora vale che
+	\[
+		\mu _r = \frac{1}{n} \sum_{i=1}^{n} g\left(X_i\right)^{r}
+	\]
+\end{definizione}
 Il metodo dei momenti consiste nel eguagliare l'espressione di un momento teorico con il suo corrispondente momento campionario, ad esempio, supponendo di avere $ X \sim \mathcal{N}\left(\mu , \sigma ^2 \right) $, allora
 \begin{align*}
 	\mu       & = \mathbb{E} \left(X\right) = \frac{1}{n} \sum_{i = 1}^{n} X_{i}                                            \\
@@ -2214,91 +2236,94 @@ Il metodo dei momenti consiste nel eguagliare l'espressione di un momento teoric
 \subsection{Metodo della massima verosimiglianza}
 Supponiamo di avere un set di campioni derivati dal lancio di una moneta:
 \begin{center}
-	\begin{tabular}{|cccccccccc|}
-		\hline
+	\begin{tabular}{cccccccccc}
+		\toprule
 		$T$ & $ T$ & $C $ & $C $ & $T $ & $T $ & $T $ & $ T$ & $ C$ & $ C$ \\
-		\hline
+		\bottomrule
 	\end{tabular}
 \end{center}
 Voglio stimare il parametro $ p $, ossia la probabilità che esca $ T $. Allora
-\textbox{Il metodo della massima verosimiglianza ricerca il valore di $ p $ tale per cui la \underline{probabilità} che escano i dati del campione \underline{sia massima}}
-La \underline{verosimiglianza} è quindi così definita: 
+\begin{tcolorbox}
+	Il metodo della massima verosimiglianza ricerca il valore di $ p $ tale per cui la \underline{probabilità} che escano i dati del campione \underline{sia massima}
+\end{tcolorbox}
+
+La \underline{verosimiglianza} è quindi così definita:
 \[
-  L\left(\theta \right) = \Pr \left(\left\{T,T,C,C,T,C,T,T,C,C\right\}\right) = p^{6} \left(1-p\right)^{4}
+	L\left(\theta \right) = \Pr \left(\left\{T,T,C,C,T,C,T,T,C,C\right\}\right) = p^{6} \left(1-p\right)^{4}
 \]
 \begin{itemize}
-  \item La verosimiglianza è dunque una funzione di $ p $ ossia del parametro che vogliamo stimare. Per ottenere una legge di distribuzione quanto più accurata possibile devo cercare di massimizzare la probabilità che si verifichi una formazione come quella del campione ($ \left\{T,T,C,C,T,T,T,T,C,C\right\} $)
-  \item La \underline{massima verosimiglianza} (o \underline{MLE}) è il valore di $ p $ che rende massima la verosimiglianza
-  \item Visto che per trovare il massimo bisogna derivare un prodotto e questo può essere molto tedioso, spesso si utilizza la \underline{log-likelihood}, ossia si applica il logaritmo alla massima verosimiglianza (il log è crescente e non altera i massimi), in modo da trasformare i prodotti in somme
+	\item La verosimiglianza è dunque una funzione di $ p $ ossia del parametro che vogliamo stimare. Per ottenere una legge di distribuzione quanto più accurata possibile devo cercare di massimizzare la probabilità che si verifichi una formazione come quella del campione ($ \left\{T,T,C,C,T,T,T,T,C,C\right\} $)
+	\item La \underline{massima verosimiglianza} (o \underline{MLE}) è il valore di $ p $ che rende massima la verosimiglianza
+	\item Visto che per trovare il massimo bisogna derivare un prodotto e questo può essere molto tedioso, spesso si utilizza la \underline{log-likelihood}, ossia si applica il logaritmo alla massima verosimiglianza (il log è crescente e non altera i massimi), in modo da trasformare i prodotti in somme
 \end{itemize}
 \subsubsection*{Valori noti di MLE}
 \begin{itemize}
-  \item \underline{Normale} 
-    \[
-          \hat{\mu } = \overline{X}_n  \quad \quad \hat{\sigma ^2 } = \frac{1}{n-1} \sum_{i=1}^{n} \left(X_i - \overline{X_n}\right)^2 
-    \]
-    \textit{I valori sono distribuiti uniformemente intorno alla media $ \mu  $, per questo la media campionaria approssima bene la media teoria. La varianza è data dalla media di quanto u valore si discosta dalla media}
-    \item \underline{Esponenziale}
-      \[
-      \hat{\lambda } = \frac{1}{\overline{X}_n}
-      \]
-      \textit{$ \lambda $ è inversamente proporzionale alla media delle osservazioni, più la media è vicina a zero, più lambda sarà alto}
-    \item \underline{Bernoulli}
-      \[
-       \hat{p} = \overline{X} _n = \frac{1}{n} \sum_{i=1}^{n} X_i
-      \]
-      \textit{Immagina il lancio ripetuto di una moneta per convincertene. E' chiaro che la miglior approssimazione di $ \mu  $ è data dal rapporto fra successi e insuccessi}
-    \item \underline{Poisson}
-      \[
-      \hat{\sigma }  = \overline{X} _n = \frac{1}{n} \sum_{i=1}^{n} X_i
-      \]
-      \item \underline{Uniforme}, che ha quindi densità
-         
-        \[
-        X_i \sim f = \begin{cases}
-          \frac{1}{\sigma } & \text{ se } x \in \left[0, \sigma \right]\\ 
-          0 & \text{ altrove }
-        \end{cases}
-        \]
-         allora 
-         \[
-           \hat{\sigma } = \operatorname{max} \left\{X_1, X_2,\ldots ,X_n\right\}
-         \]
-         \textit{Se ci pensi ciò significa che i dati si distribuiscono in maniera uniforme nel range $ \left[0, \sigma \right] $ e non ce ne possono essere maggiori di $ \sigma  $ stesso. La stima migliore è il dato più alto registrato}
+	\item \underline{Normale}
+	      \[
+		      \hat{\mu } = \overline{X}_n  \quad \quad \hat{\sigma ^2 } = \frac{1}{n-1} \sum_{i=1}^{n} \left(X_i - \overline{X_n}\right)^2
+	      \]
+	      \textit{I valori sono distribuiti uniformemente intorno alla media $ \mu  $, per questo la media campionaria approssima bene la media teoria. La varianza è data dalla media di quanto u valore si discosta dalla media}
+	\item \underline{Esponenziale}
+	      \[
+		      \hat{\lambda } = \frac{1}{\overline{X}_n}
+	      \]
+	      \textit{$ \lambda $ è inversamente proporzionale alla media delle osservazioni, più la media è vicina a zero, più lambda sarà alto}
+	\item \underline{Bernoulli}
+	      \[
+		      \hat{p} = \overline{X} _n = \frac{1}{n} \sum_{i=1}^{n} X_i
+	      \]
+	      \textit{Immagina il lancio ripetuto di una moneta per convincertene. E' chiaro che la miglior approssimazione di $ \mu  $ è data dal rapporto fra successi e insuccessi}
+	\item \underline{Poisson}
+	      \[
+		      \hat{\sigma }  = \overline{X} _n = \frac{1}{n} \sum_{i=1}^{n} X_i
+	      \]
+	\item \underline{Uniforme}, che ha quindi densità
+
+	      \[
+		      X_i \sim f = \begin{cases}
+			      \frac{1}{\sigma } & \text{ se } x \in \left[0, \sigma \right] \\
+			      0                 & \text{ altrove }
+		      \end{cases}
+	      \]
+	      allora
+	      \[
+		      \hat{\sigma } = \operatorname{max} \left\{X_1, X_2,\ldots ,X_n\right\}
+	      \]
+	      \textit{Se ci pensi ciò significa che i dati si distribuiscono in maniera uniforme nel range $ \left[0, \sigma \right] $ e non ce ne possono essere maggiori di $ \sigma  $ stesso. La stima migliore è il dato più alto registrato}
 \end{itemize}
 \subsection{Errore di stima ed intervalli di confidenza}
-\definizione{Errore di stima}{
-  Dato un parametro $ \theta  $, si definisce errore di stima la seguente quantità: 
-  \[
-  \hat{\theta } - \theta 
-  \]
-}
+\begin{definizione}{Errore di stima}
+	Dato un parametro $ \theta  $, si definisce errore di stima la seguente quantità:
+	\[
+		\hat{\theta } - \theta
+	\]
+\end{definizione}
 Si può calcolare la probabilità che un errore di stima sia "piccolo", ossia \underline{minore della varianza}. Ciò significa prendere la v.a. $ \hat{\theta } - \theta   \sim  \mathcal{N} \left(0, \frac{\sigma ^2}{n} \right)$ e calcolare la probabilità dell'intervallo $ \left[\overline{X}_n- \Var , \overline{X}_n+ \Var \right] $
-\definizione{Intervallo di confidenza}{
-  Un intervallo è detto \underline{intervallo di confidenza} di livello $ \alpha \in \left(0,1\right) $  se la probabilità che la stima di un parametro ignoto rientri all'interno di esso è $ \alpha  $
-}
+\begin{definizione}{Intervallo di confidenza}
+	Un intervallo è detto \underline{intervallo di confidenza} di livello $ \alpha \in \left(0,1\right) $  se la probabilità che la stima di un parametro ignoto rientri all'interno di esso è $ \alpha  $
+\end{definizione}
 Per ragioni di comodità di calcolo, spesso l'intervallo di confidenza si indica con $ 1-\alpha  $
 \vskip3mm
-Praticamente questo servirà quando si andrà a calcolare intorno alla media di una normale l'intervallo di livello $ \alpha  $, ossia l'intervallo tale che 
+Praticamente questo servirà quando si andrà a calcolare intorno alla media di una normale l'intervallo di livello $ \alpha  $, ossia l'intervallo tale che
 \[
-\Pr \left(x \in \left[\mu + x , \mu -x\right]\right)=\alpha 
+	\Pr \left(x \in \left[\mu + x , \mu -x\right]\right)=\alpha
 \]
 \begin{center}
-  \begin{tikzpicture}
-  \begin{axis}[
-      xmin=-4, xmax=4,
-      ymin=0,ymax=0.5,
-      restrict y to domain = 0:0.5, domain=-4:4, width=0.48\textwidth, height=0.48\textwidth, grid=major, samples=200,  ylabel=$f(x)$, xlabel=$x$, legend entries={{}{$N\left(0,1\right)$}}]
-    \def\myomega{1}
-    \def\mymu{0}
-    \addplot[pattern = north east lines ,draw =none, domain = -2:2] {1/(sqrt(2*pi*\myomega^2))*e^(-1/2*((x-\mymu)^2)/(\myomega^2))}\closedcycle;
-    \addplot[black, thick] {1/(sqrt(2*pi*\myomega^2))*e^(-1/2*((x-\mymu)^2)/(\myomega^2))};
-    \node (sx)[blackdot] at (-2, {1/(sqrt(2*pi*\myomega^2))*e^(-1/2*(((-2)-\mymu)^2)/(\myomega^2))}) {};
-    \node (dx)[blackdot] at (2, {1/(sqrt(2*pi*\myomega^2))*e^(-1/2*((2-\mymu)^2)/(\myomega^2))}) {};
-    \draw [dashed] (-2,0)--(sx);
-    \draw [dashed] (2,0)--(dx);
-  \end{axis}
-\end{tikzpicture} 
+	\begin{tikzpicture}
+		\begin{axis}[
+				xmin=-4, xmax=4,
+				ymin=0,ymax=0.5,
+				restrict y to domain = 0:0.5, domain=-4:4, width=0.48\textwidth, height=0.48\textwidth, grid=major, samples=200,  ylabel=$f(x)$, xlabel=$x$, legend entries={{}{$N\left(0,1\right)$}}]
+			\def\myomega{1}
+			\def\mymu{0}
+			\addplot[pattern = north east lines ,draw =none, domain = -2:2] {1/(sqrt(2*pi*\myomega^2))*e^(-1/2*((x-\mymu)^2)/(\myomega^2))}\closedcycle;
+			\addplot[black, thick] {1/(sqrt(2*pi*\myomega^2))*e^(-1/2*((x-\mymu)^2)/(\myomega^2))};
+			\node (sx)[blackdot] at (-2, {1/(sqrt(2*pi*\myomega^2))*e^(-1/2*(((-2)-\mymu)^2)/(\myomega^2))}) {};
+			\node (dx)[blackdot] at (2, {1/(sqrt(2*pi*\myomega^2))*e^(-1/2*((2-\mymu)^2)/(\myomega^2))}) {};
+			\draw [dashed] (-2,0)--(sx);
+			\draw [dashed] (2,0)--(dx);
+		\end{axis}
+	\end{tikzpicture}
 \end{center}
 L'area del trapezoide \tikz[scale = 0.5] \draw [pattern = north east lines](0,0)rectangle(1,1); è uguale ad $ \alpha  $, supponendo che l'intervallo $ -2,2 $ sia di livello $ \alpha  $
 \end{document}

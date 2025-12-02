@@ -1,12 +1,10 @@
 %&../.preamble
-\endofdump
+\externalize{../.preamble}
 
 \usetikzlibrary{external}
 \usetikzlibrary{patterns}
 \usepackage[outline]{contour}
 %\tikzset{external/system call={pdflatex -fmt=../.preamble.fmt \tikzexternalcheckshellescape -halt-on-error -interaction=batchmode -jobname "\image" "\texsource"}}
-\tikzset{external/system call={pdflatex --shell-escape --fmt=../.preamble --halt-on-error -jobname "\image" "\endofdump\texsource"}}
-\tikzexternalize[prefix=tikz/]
 
 \title{Statistica}
 \author{Mattia Marini}
